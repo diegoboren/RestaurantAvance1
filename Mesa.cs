@@ -1,102 +1,102 @@
-﻿using System;
-namespace Proyecto
-{
-    public class Mesa
+﻿    using System;
+    namespace Proyecto
     {
-        int _cantidadOcupantes;
-        string _zonaRestaurant;
-        string _mozoAsignado;
-        bool _estaOcupada;
-        //double _totalCuenta;
-        private int _numeroDeMesa;
-
-        public Mesa()
+        public class Mesa
         {
-            NumeroDeMesa = 0;
-            _cantidadOcupantes = 0;
-            _zonaRestaurant = "";
-            _mozoAsignado = "";
-        }
+            int _cantidadOcupantes;
+            string _zonaRestaurant;
+            string _mozoAsignado;
+            bool _estaOcupada;
+            //double _totalCuenta;
+            private int _numeroDeMesa;
 
-
-
-
-        public int NumeroDeMesa { get => _numeroDeMesa; set => _numeroDeMesa = value; }
-
-        public int CantidadOcupantes
-        {
-            get
+            public Mesa()
             {
-                return _cantidadOcupantes;
+                NumeroDeMesa = 0;
+                _cantidadOcupantes = 0;
+                _zonaRestaurant = "";
+                _mozoAsignado = "";
             }
 
 
-            set
+
+
+            public int NumeroDeMesa { get => _numeroDeMesa; set => _numeroDeMesa = value; }
+
+            public int CantidadOcupantes
             {
-                _cantidadOcupantes = value;
-            }
-        }
-
-
-
-        public string ZonaRestaurant
-        {
-            get
-            {
-                return _zonaRestaurant;
-            }
-
-
-            set
-            {
-                _zonaRestaurant = value;
-            }
-        }
-
-
-
-        public string MozoAsignado
-        {
-            get
-            {
-                return _mozoAsignado;
-            }
-
-
-            set
-            {
-                _mozoAsignado = value;
-            }
-        }
-
-
-        public bool EstaOcupada
-        {
-
-
-            set
-            {
-                if (NumeroDeMesa != 0 && CantidadOcupantes > 0)
+                get
                 {
-                    _estaOcupada = true;
-
-                }
-                else
-                {
-                    _estaOcupada = false;
+                    return _cantidadOcupantes;
                 }
 
+
+                set
+                {
+                    _cantidadOcupantes = value;
+                }
             }
 
-            get
+
+
+            public string ZonaRestaurant
             {
-                return _estaOcupada;
+                get
+                {
+                    return _zonaRestaurant;
+                }
+
+
+                set
+                {
+                    _zonaRestaurant = value;
+                }
+            }
+
+
+
+            public string MozoAsignado
+            {
+                get
+                {
+                    return _mozoAsignado;
+                }
+
+
+                set
+                {
+                    _mozoAsignado = value;
+                }
+            }
+
+
+            public bool EstaOcupada
+            {
+
+
+                set
+                {
+                    if (NumeroDeMesa != 0 && CantidadOcupantes > 0)
+                    {
+                        _estaOcupada = true;
+
+                    }
+                    else
+                    {
+                        _estaOcupada = false;
+                    }
+
+                }
+
+                get
+                {
+                    return _estaOcupada;
+
+                }
+
 
             }
 
 
         }
-
-
     }
-}

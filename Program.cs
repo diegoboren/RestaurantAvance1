@@ -6,11 +6,17 @@ namespace Proyecto
     {
         public static void Main(string[] args)
         {
-            Mesa mesa1 = new Mesa();
 
-            mesa1.CantidadOcupantes = 10;
+            Cliente cliente1 = new Cliente();
 
-            Console.WriteLine(mesa1);
+            cliente1.NombreCliente = "Diego";
+
+            Console.WriteLine(cliente1.NombreCliente);
+
+            
+
+
+
         }
     }
 }
